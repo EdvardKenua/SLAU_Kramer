@@ -35,12 +35,11 @@ namespace SLAU_Kramer
             b[1] = double.Parse(B1.Text);
             b[2] = double.Parse(B2.Text);
 
-            Kramer.GetNums(a, b);
-            Kramer.Calculate(ref dX, ref dY, ref dZ);
+            KramerOOP kramer = new KramerOOP(a, b);
 
-            X.Text = Convert.ToString(dX);
-            Y.Text = Convert.ToString(dY);
-            Z.Text = Convert.ToString(dZ);
+            X.Text = Convert.ToString(kramer.X);
+            Y.Text = Convert.ToString(kramer.Y);
+            Z.Text = Convert.ToString(kramer.Z);
         }
     }
 }
