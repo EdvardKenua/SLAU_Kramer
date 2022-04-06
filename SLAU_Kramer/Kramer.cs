@@ -8,10 +8,12 @@ namespace SLAU_Kramer
 {
     public partial class Kramer
     {
-        double[,] a = new double[3, 3];
-        double[] b = new double[3];
-        public double X, Y, Z;
-        public void GetNums(double[,] A, double[] B)
+        private static double[,] a = new double[3, 3];
+        private static double[] b = new double[3];
+        public static double X, Y, Z;
+
+
+        public static void GetNums(double[,] A, double[] B)
         {
             a = A; b = B; 
         }
@@ -47,7 +49,8 @@ namespace SLAU_Kramer
         //                Console.Write($"b{i + 1} = ");
         //                b[i] = Convert.ToDouble(Console.ReadLine());
         //            }
-        public void Calculate()
+
+        public static void Calculate(ref double x, ref double y, ref double z)
         {
             double[,] x1 = CopyArr(a);
             double[,] x2 = CopyArr(a);
@@ -62,21 +65,10 @@ namespace SLAU_Kramer
             X = dX1 / dA;
             Y = dX2 / dA;
             Z = dX3 / dA;
+            x = X;
+            y = Y;
+            z = Z;
 
         }
-        //            double[,] x1 = CopyArr(a);
-        //            double[,] x2 = CopyArr(a);
-        //            double[,] x3 = CopyArr(a);
-        //            x1[0, 0] = x2[0, 1] = x3[0, 2] = b[0];
-        //            x1[1, 0] = x2[1, 1] = x3[1, 2] = b[1];
-        //            x1[2, 0] = x2[2, 1] = x3[2, 2] = b[2];
-        //            double dA = Det(a);
-        //            double dX1 = Det(x1);
-        //            double dX2 = Det(x2);
-        //            double dX3 = Det(x3);
-        //            Console.WriteLine($"x1 = dX1/dA = {dX1} / {dA} = {dX1 / dA}");
-        //            Console.WriteLine($"x2 = dX2/dA = {dX2} / {dA} = {dX2 / dA}");
-        //            Console.WriteLine($"x3 = dX3/dA = {dX3} / {dA} = {dX3 / dA}");
-        //  }
     }
 }

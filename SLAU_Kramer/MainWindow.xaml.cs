@@ -1,17 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace SLAU_Kramer
 {
@@ -22,6 +10,7 @@ namespace SLAU_Kramer
     {
         double[,] a = new double[3, 3];
         double[] b = new double[3];
+        double dX = 0, dY = 0, dZ = 0;
 
         public MainWindow()
         {
@@ -46,10 +35,12 @@ namespace SLAU_Kramer
             b[1] = double.Parse(B1.Text);
             b[2] = double.Parse(B2.Text);
 
-            Kramer kramer = new Kramer();
-            kramer.GetNums(a,b);
+            Kramer.GetNums(a, b);
+            Kramer.Calculate(ref dX, ref dY, ref dZ);
 
-            X.Text = Convert.ToString(a[0,1]);
+            X.Text = Convert.ToString(dX);
+            Y.Text = Convert.ToString(dY);
+            Z.Text = Convert.ToString(dZ);
         }
     }
 }
