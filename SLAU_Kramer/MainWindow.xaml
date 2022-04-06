@@ -5,24 +5,66 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SLAU_Kramer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="203" Width="313">
+        Title="Решение СЛАУ" Height="203" Width="313" Focusable="False" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid Margin="0,0,0,-6">
         <TextBox x:Name="A03" HorizontalAlignment="Left" Height="24" Margin="112,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="26" Text="3"/>
-        <TextBox x:Name="A02" HorizontalAlignment="Left" Height="24" Margin="81,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="26" Text="2"/>
-        <TextBox x:Name="A11" HorizontalAlignment="Left" Height="25" Margin="50,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="27" Text="5"/>
+        <TextBox x:Name="A02" HorizontalAlignment="Left" Height="24" Margin="71,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="26" Text="2" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.053"/>
+                    <TranslateTransform X="-0.026" Y="0"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox x:Name="A11" HorizontalAlignment="Left" Height="25" Margin="27,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="27" Text="5"/>
         <TextBox x:Name="A13" HorizontalAlignment="Left" Height="25" Margin="112,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="26" Text="7"/>
         <TextBox x:Name="A23" HorizontalAlignment="Left" Height="24" Margin="112,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="26" Text="11"/>
-        <TextBox x:Name="A22" HorizontalAlignment="Left" Height="24" Margin="81,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="26" Text="10"/>
-        <TextBox x:Name="A12" HorizontalAlignment="Left" Height="25" Margin="81,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="26" Text="6"/>
-        <TextBox x:Name="B0" HorizontalAlignment="Left" Height="24" Margin="143,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="26" Text="4"/>
-        <TextBox x:Name="B2" HorizontalAlignment="Left" Height="24" Margin="143,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="26" Text="12"/>
-        <TextBox x:Name="B1" HorizontalAlignment="Left" Height="24" Margin="143,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="26" Text="8"/>
-        <TextBox x:Name="X" HorizontalAlignment="Left" Height="24" Margin="200,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="81"/>
-        <TextBox x:Name="Z" HorizontalAlignment="Left" Height="24" Margin="200,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="81"/>
-        <TextBox x:Name="Y" HorizontalAlignment="Left" Height="24" Margin="200,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="81"/>
-        <Button Content="Рассчитать" HorizontalAlignment="Left" Height="24" Margin="112,137,0,0" VerticalAlignment="Top" Width="128" Click="Button_Click"/>
-        <TextBox x:Name="A21" HorizontalAlignment="Left" Height="25" Margin="50,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="27" Text="9"/>
-        <TextBox x:Name="A01" HorizontalAlignment="Left" Height="24" Margin="50,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="26" Text="2"/>
+        <TextBox x:Name="A22" HorizontalAlignment="Left" Height="24" Margin="71,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="26" Text="10" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.053"/>
+                    <TranslateTransform X="0.026" Y="0"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox x:Name="A12" HorizontalAlignment="Left" Height="25" Margin="71,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="26" Text="6" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.053"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox x:Name="B0" HorizontalAlignment="Left" Height="24" Margin="155,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="26" Text="4"/>
+        <TextBox x:Name="B2" HorizontalAlignment="Left" Height="24" Margin="155,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="26" Text="12"/>
+        <TextBox x:Name="B1" HorizontalAlignment="Left" Height="24" Margin="155,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="26" Text="8"/>
+        <TextBox x:Name="X" HorizontalAlignment="Left" Height="24" Margin="222,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="81"/>
+        <TextBox x:Name="Z" HorizontalAlignment="Left" Height="24" Margin="222,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="81"/>
+        <TextBox x:Name="Y" HorizontalAlignment="Left" Height="24" Margin="222,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="81"/>
+        <Button Content="Рассчитать" HorizontalAlignment="Center" Height="24" Margin="0,137,0,0" VerticalAlignment="Top" Width="293" Click="Button_Click"/>
+        <TextBox x:Name="A21" HorizontalAlignment="Left" Height="25" Margin="27,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="27" Text="9"/>
+        <TextBox x:Name="A01" HorizontalAlignment="Left" Height="24" Margin="27,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="26" Text="2"/>
+        <Label Content="X1 =&#xD;&#xA;" HorizontalAlignment="Left" Height="24" Margin="186,37,0,0" VerticalAlignment="Top" Width="36"/>
+        <Label Content="X2 =&#xD;&#xA;" HorizontalAlignment="Left" Height="24" Margin="186,66,0,0" VerticalAlignment="Top" Width="36"/>
+        <Label Content="X3 =&#xD;&#xA;" HorizontalAlignment="Left" Height="23" Margin="186,95,0,0" VerticalAlignment="Top" Width="36" RenderTransformOrigin="0.514,0.546"/>
+        <Label Content="x" HorizontalAlignment="Left" Height="24" Margin="10,39,0,0" VerticalAlignment="Top" Width="17"/>
+        <Label Content="x&#xD;&#xA;" HorizontalAlignment="Left" Height="23" Margin="10,68,0,0" VerticalAlignment="Top" Width="17"/>
+        <Label Content="x&#xD;&#xA;" HorizontalAlignment="Left" Height="25" Margin="10,96,0,0" VerticalAlignment="Top" Width="17"/>
+        <Label Content="y&#xD;&#xA;" HorizontalAlignment="Left" Height="28" Margin="54,38,0,0" VerticalAlignment="Top" Width="18"/>
+        <Label Content="y&#xD;&#xA;Label" HorizontalAlignment="Left" Height="25" Margin="54,66,0,0" VerticalAlignment="Top" Width="18"/>
+        <Label Content="y&#xD;&#xA;" HorizontalAlignment="Left" Height="25" Margin="53,96,0,0" VerticalAlignment="Top" Width="19"/>
+        <Label Content="z&#xD;&#xA;" HorizontalAlignment="Left" Height="23" Margin="96,38,0,0" VerticalAlignment="Top" Width="16"/>
+        <Label Content="z&#xD;&#xA;&#xD;&#xA;" HorizontalAlignment="Left" Height="25" Margin="96,66,0,0" VerticalAlignment="Top" Width="16"/>
+        <Label Content="z&#xD;&#xA;&#xD;&#xA;" HorizontalAlignment="Left" Height="23" Margin="96,96,0,0" VerticalAlignment="Top" Width="16"/>
+        <Label Content="=&#xD;&#xA;&#xD;&#xA;" HorizontalAlignment="Left" Height="22" Margin="138,37,0,0" VerticalAlignment="Top" Width="18"/>
+        <Label Content="=&#xD;&#xA;&#xD;&#xA;" HorizontalAlignment="Left" Height="24" Margin="138,66,0,0" VerticalAlignment="Top" Width="18"/>
+        <Label Content="=&#xD;&#xA;abel" HorizontalAlignment="Left" Height="23" Margin="138,96,0,0" VerticalAlignment="Top" Width="18"/>
 
     </Grid>
 </Window>
